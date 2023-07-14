@@ -9,13 +9,15 @@
 {% load static %}
 
 {% block contenido %}
-  {% if request.user.is_authenticated %}
-    <h3>Bienvenido</h3>
-    <hr>
-    <h4>{{ user.username | upper }}, Bienvenido</h4>
-  {% endif %}
-  <hr>
 
+  <hr>
+  {% if request.user.is_authenticated %}
+  <h3>Bienvenido,inicio exitoso</h3>
+  <hr>
+  <h4>
+      Bienvenido usuario: {{ user.username | upper }}
+      </h4>
+  {% endif %}
   <hr>
   <div class="container">
     <h1>CREAR CURSO</h1>
