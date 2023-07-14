@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+
+{% load static %}
+
+{% block contenido %}
+
+
+{% if request.user.is_authenticated %}
+<h3>Bienvenido,inicio exitoso</h3>
+<hr>
+<h4>
+    Bienvenido usuario: {{ user.username | upper }}
+    </h4>
+{% endif %}
+
+{% endblock %}
